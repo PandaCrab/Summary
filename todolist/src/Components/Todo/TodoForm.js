@@ -1,25 +1,22 @@
 import React from 'react';
 
+import './TodoForm.css'
+
 const TodoForm = ({ newTask, handleChange, handleSubmit }) =>
 {
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='submit-area'>
           <input
+            className='input'
             name="title"
             placeholder="New task"
             value={newTask.title || ""}
             onChange={handleChange}
           />
           {!newTask.title ? null : (
-            <>
-              <textarea
-                name="description"
-                placeholder="Details..."
-                value={newTask.description || ""}
-                onChange={handleChange}
-              />
+              <>
               <button type="submit">Add Task</button>
-            </>
+              </>
           )}
         </form>
       );
