@@ -20,7 +20,7 @@ function App() {
   const [allTasks, setAllTasks] = useState([]);
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!newTask.title) return
+    if (!newTask.title || /^\s*$/.test(newTask.title)) return
     setAllTasks((prev) => [newTask, ...prev]);
     setNewTask({});
   };
@@ -28,6 +28,7 @@ function App() {
   const handleDelete = (taskIdToRemove) => {
     setAllTasks((prev) => prev.filter((task) => task.id !== taskIdToRemove));
   };
+
 
   return (
     <>
@@ -40,7 +41,9 @@ function App() {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         />
-        <TodoList allTasks={allTasks} handleDelete={handleDelete} />
+        <TodoList 
+          allTasks={allTasks} 
+          handleDelete={handleDelete} />
       </main>
     </>
   );

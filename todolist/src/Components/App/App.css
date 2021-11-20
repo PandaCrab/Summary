@@ -1,7 +1,7 @@
 body, html{
   margin: 0;
   padding: 0;
-  background-color: #00cc99;
+  background-color: #646464;
   height: 100%;
 }
 
@@ -9,8 +9,7 @@ body, html{
 
   width: 100%;
   height: 10rem; 
-  background-color: #1fbd99;
-  box-shadow: 5px 1px 7px gray;
+  background-color: #181818;
   display:flex;
 }
 
