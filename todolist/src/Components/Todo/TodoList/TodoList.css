@@ -7,9 +7,12 @@
     font-family: 'Montagu-slab', serif;
 }
 
-.list-items {
+.list-items,
+.complete {
     margin-bottom: 1em;
     padding: 2px 5px;
+    height: 3rem;
+    align-items: center;
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -19,7 +22,38 @@
     background-color: ghostwhite;
 }
 
+.complete h2{
+    text-decoration: line-through;
+    opacity: 40%;
+}
+
+.complete-btn {
+    width: 90%;
+}
+
+@media screen and (max-width: 750px) {
+    .edit-input {
+        width: 80%;
+    }
+}
+
+.edit-input {
+    height: 20px;
+    border-radius: 12px;
+    border: 2px double;
+    width: 40%;
+}
+
 .del-add {
     display: flex;
-    align-items: center;
+    width: 5%;
+    font-size: 32px;
 }
+
+.delete-btn {
+    margin-right: 5px;
+}
+
+/* .delete-btn:hover {
+    animation: ;
+} */

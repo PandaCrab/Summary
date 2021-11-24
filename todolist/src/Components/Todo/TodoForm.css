@@ -6,6 +6,16 @@
     align-items: center;
 }
 
+@media screen and (max-width: 750px) {
+    .submit-area {
+        margin: 6px;
+    }
+
+    .input {
+        width: 90%;
+    }
+}
+
 button {
     border-radius: 2rem;
 }
@@ -16,8 +26,7 @@ button:hover {
 
 .input {
     display: inline-block;
-    max-width: 60%;
-    min-width: 40%;
+    width: 70%;
     border-radius: 8px;
     flex-direction: column;
     text-align: center;

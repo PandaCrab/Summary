@@ -7,6 +7,7 @@ const TodoForm = ({ newTask, handleChange, handleSubmit }) =>
     return (
         <form onSubmit={handleSubmit} className='submit-area'>
           <input
+          maxLength="118"
             className='input'
             name="title"
             placeholder="New task"
