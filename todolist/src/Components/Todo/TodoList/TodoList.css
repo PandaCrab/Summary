@@ -1,28 +1,44 @@
+input, p {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
 .list {
     margin: auto;
     padding: 0px 30px;
     flex-direction: column;
-    align-items: center;
-    min-width: 60%;
-    font-family: 'Montagu-slab', serif;
+    width: 90%;
 }
 
 .list-items,
 .complete {
     margin-bottom: 1em;
     padding: 2px 5px;
-    height: 3rem;
+    height: 2rem;
     align-items: center;
     text-decoration: none;
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border: 2px solid;
-    border-radius: 12px;
-    background-color: ghostwhite;
+    border-radius: 15px;
+    background: ghostwhite;
 }
 
-.complete h2{
+.edit-input {
+    max-height: 20px;
+    min-height: 8px;
+    border-radius: 10px;
+    border: 2px;
+    width: 50%;
+}
+
+p:hover {
+    cursor: default;
+}
+
+.complete p{
     text-decoration: line-through;
     opacity: 40%;
 }
@@ -31,29 +47,57 @@
     width: 90%;
 }
 
-@media screen and (max-width: 750px) {
-    .edit-input {
-        width: 80%;
-    }
-}
-
-.edit-input {
-    height: 20px;
-    border-radius: 12px;
-    border: 2px double;
-    width: 40%;
-}
-
 .del-add {
     display: flex;
-    width: 5%;
-    font-size: 32px;
+    width: 10%;
+    font-size: 25px;
+    justify-content: flex-end;
 }
 
 .delete-btn {
-    margin-right: 5px;
+    margin-right: 3px;
+    opacity: 0.6;
 }
 
-/* .delete-btn:hover {
-    animation: ;
-} */
+.update-btn {
+    opacity: 0.6;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.update-btn:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 750px) {
+    .list {
+        padding: 0;
+        width: 90%;
+    }
+
+    .edit-input {
+        font-size: 8px;
+    }
+
+    .list-items,
+    .complete {
+        margin-bottom: 0.5em;
+        height: 1rem;
+        border-radius: 10px;
+        font-size: 8px;
+        border: 0.5px solid;
+    }
+
+    .del-add {
+        font-size: 10px;
+        max-width: 20px;
+        width: 10%
+    }
+
+    .complete p {
+        text-decoration: line-through;
+        opacity: 50%;
+    }
+}

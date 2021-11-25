@@ -12,7 +12,12 @@
     }
 
     .input {
-        width: 90%;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    button {
+        font-size: 8px;
     }
 }
 

@@ -62,7 +62,7 @@ function App() {
   return (
     <>
         <div className="header">
-          <h1 className="header-t">Todos</h1>
+          <h1>Todos</h1>
         </div>
         <main>
         <TodoForm

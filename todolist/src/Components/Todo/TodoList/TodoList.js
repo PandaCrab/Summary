@@ -9,22 +9,17 @@ const TodoList = ({ allTasks,handleDelete, addToTasks, completeTask,}) => {
   const [taskEdit, setTaskEdit] = useState(null);
   const [textEdit, setTextEdit] = useState('');
 
-  // const inputRef = useRef(null);
-
-  // useEffect(() => {
-  //   inputRef.current.focus();
-  // });
   const editTask = id => {
     const updatedTasks = [...allTasks].map(task => {
       if (task.id === id) {
         task.title = textEdit.match(/\w/g) ? textEdit : task.title;
-        task.isCompleted = textEdit ? false: task.isCompleted;
+        task.isCompleted = textEdit ? false : task.isCompleted;
       }
       return task
     });
     addToTasks(updatedTasks);
     setTaskEdit(null);
-    setTextEdit("");
+    setTextEdit('');
   };
 
     return (
@@ -38,13 +33,13 @@ const TodoList = ({ allTasks,handleDelete, addToTasks, completeTask,}) => {
                     className='edit-input'
                     type="text"
                     autoFocus
-                    minLength="0"
                     maxLength='120'
+                    placeholder='what we do?'
                     onChange={(e) => setTextEdit(e.target.value)}
                     value={textEdit || title}
                     onKeyDown={(e) => e.key === 'Enter' && editTask(id)}
                   />) : (<div className="complete-btn"  onClick={() => completeTask(id)}>
-                          <h2>{title}</h2>
+                          <p>{title}</p>
                          </div>)
                 }
                 {taskEdit === id ? 
