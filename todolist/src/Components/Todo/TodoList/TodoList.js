@@ -26,7 +26,7 @@ const TodoList = ({ allTasks,handleDelete, addToTasks, completeTask,}) => {
         <ul className='list'>
           {allTasks.map(({ title, id, isCompleted }) => (
             <li key={id}
-                className={isCompleted ? 'list-item complete' : 'list-items'}
+                className={isCompleted ? 'complete' : 'list-items'}
                 >
                 {taskEdit === id ?
                   (<input 

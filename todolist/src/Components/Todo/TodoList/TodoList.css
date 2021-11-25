@@ -40,7 +40,7 @@ p:hover {
 
 .complete p{
     text-decoration: line-through;
-    opacity: 40%;
+    opacity: 0.5;
 }
 
 .complete-btn {
@@ -78,7 +78,7 @@ p:hover {
     }
 
     .edit-input {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .list-items,
@@ -86,7 +86,7 @@ p:hover {
         margin-bottom: 0.5em;
         height: 1rem;
         border-radius: 10px;
-        font-size: 8px;
+        font-size: 12px;
         border: 0.5px solid;
     }
 
@@ -98,6 +98,6 @@ p:hover {
 
     .complete p {
         text-decoration: line-through;
-        opacity: 50%;
+        opacity: 0.5;
     }
 }
