@@ -16,7 +16,7 @@ const TodoForm = ({ newTask, handleChange, handleSubmit }) =>
           />
           {!newTask.title ? null : (
               <>
-              <button type="submit">Add Task</button>
+              <button type="submit" className="fill">Add Task</button>
               </>
           )}
         </form>

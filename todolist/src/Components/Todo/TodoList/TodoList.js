@@ -8,6 +8,11 @@ import './TodoList.css'
 const TodoList = ({ allTasks,handleDelete, addToTasks, completeTask,}) => {
   const [taskEdit, setTaskEdit] = useState(null);
   const [textEdit, setTextEdit] = useState('');
+  
+  const handleUpdate = (id, title) => {
+    setTaskEdit(id)
+    setTextEdit(title)
+  };
 
   const editTask = id => {
     const updatedTasks = [...allTasks].map(task => {
@@ -34,9 +39,9 @@ const TodoList = ({ allTasks,handleDelete, addToTasks, completeTask,}) => {
                     type="text"
                     autoFocus
                     maxLength='120'
-                    placeholder='what we do?'
-                    onChange={(e) => setTextEdit(e.target.value)}
-                    value={textEdit || title}
+                    placeholder='What we do?'
+                    onChange={({ target }) => setTextEdit(target.value)}
+                    value={textEdit}
                     onKeyDown={(e) => e.key === 'Enter' && editTask(id)}
                   />) : (<div className="complete-btn"  onClick={() => completeTask(id)}>
                           <p>{title}</p>
@@ -51,7 +56,7 @@ const TodoList = ({ allTasks,handleDelete, addToTasks, completeTask,}) => {
                     onClick={() => handleDelete(id)} />
                   <HiOutlinePencil 
                     className="update-btn"
-                    onClick={() => setTaskEdit(id)} />
+                    onClick={() => handleUpdate(id, title)} />
                 </div>)
                 }
             </li>
